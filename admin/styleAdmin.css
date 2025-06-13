@@ -1,0 +1,238 @@
+/* Navbar (header) */
+
+.main-header {
+  width: 100%;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  height: 70px;
+  background: linear-gradient(90deg, #4a90e2, #9013fe);
+  margin-bottom: 80px;
+}
+
+.navbar-left, .navbar-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-left {
+  justify-content: flex-start;
+}
+
+.navbar-right {
+  justify-content: flex-end;
+}
+
+.navbar-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: azure;
+}
+
+.logout-btn {
+  background-color: #ab1c1c;
+  border:2px solid azure;
+  color: azure;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #d9534f;
+}
+
+a {
+  color: azure;
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  border: 2px solid azure;
+  border-radius: 0.2rem;
+  padding: 6px;
+}
+
+
+/* page annonces */
+
+.annonce {
+    width: 400px;
+    border: 1px solid black;
+    margin: 30px;
+}
+
+.annonce-infos {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.infos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 30px;
+    margin-top: 10px;
+}
+
+.annonce-infos h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.options {
+    margin-top: 20px;
+    grid-column: span 2;
+}
+
+
+.button .suppr{
+    margin: 0 0 10px 10px;
+    background-color: #ab1c1c;
+    color: azure;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.slide-img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+    max-height: 400px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0 12px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+
+/* espacements publier/modifier une annonce */
+
+.form-annonce{
+    margin-top: 50px;
+}
+
+.grid-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 30px 60px;
+  max-width: 700px;
+  margin: 40px auto;
+}
+
+.inputs-left,
+.textareas-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.textareas-right {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.files-left {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.submit-right {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.form-annonce input[type="submit"] {
+  background-color: #1a6e2d;
+  color: azure;
+  padding: 6px 0;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.form-annonce input[type="submit"]:hover {
+  background-color: #43af5a;
+}
+
+
+/* style page connexion */
+
+.inputs-connexion {
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+/* style généraux */
+
+h2 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+
+}
+
+.card-title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+input{
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+textarea{
+    width: 300px;
+    min-height: 250px;
+}
+
+img {
+  width: 100%;
+}
+
+.card-action {
+  padding: 0;
+}
