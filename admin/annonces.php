@@ -46,7 +46,7 @@ if (!$_SESSION['mdp']) {
                         <!-- Photos -->
                         <div class="photos d-flex flex-wrap gap-2">
                             <?php
-                            $photos = $bdd->prepare('SELECT * FROM photos WHERE id_annonce = ?');
+                            $photos = $bdd->prepare('SELECT * FROM photos WHERE id_annonce = ? ORDER BY nom ASC');
                             $photos->execute([$annonce['id']]);
                             $allPhotos = $photos->fetchAll();
                             ?>

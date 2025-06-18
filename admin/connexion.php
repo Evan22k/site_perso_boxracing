@@ -50,6 +50,7 @@ if (isset($_POST['valider'])) {
             </div>
             <h1 class="navbar-title">Connexion Admin</h1>
             <div class="navbar-right">
+                <a href="../accueil.php">Retour à l'accueil</a>
             </div>
         </nav>
     </header>

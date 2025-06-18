@@ -6,10 +6,10 @@
       <div class="footer-links">
         <h4>Liens utiles</h4>
         <ul>
-          <li><a href="/">Accueil</a></li>
+          <li><a href="/accueil.php">Accueil</a></li>
           <li><a href="/occasions.php">Nos occasions</a></li>
+          <li><a href="/actualites.php">Actualités</a></li>
           <li><a href="/contact.php">Contact</a></li>
-          <li><a href="/mentions-legales.php">Mentions légales</a></li>
         </ul>
       </div>
       <div class="footer-contact">

@@ -1,13 +1,11 @@
 <?php include "header.php" ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-    <div id="atelier_image" class="background-image-atelier"></div>
     <div class="container-fluid container-black">
         <h1>Nos prestations atelier :</h1>
         <hr>
 
         <h2>Interventions uniquement sur les motos de marques :</h2>
-        <hr class="hr-h2">
         <div class="logos-marques">
             <img src="images/honda-logo.png" alt="Honda">
             <img src="images/kawasaki-5-logo-png-transparent.png" alt="Kawasaki">
@@ -21,7 +19,7 @@
     <div class="container-fluid container-white">
 
         <h2>Nos Services :</h2>
-        <hr class="hr-h2">
+        <hr class="hr">
         <section class="services-grid">
             <div class="grid">
                 <div class="card-service">

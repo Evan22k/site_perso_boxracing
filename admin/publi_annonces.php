@@ -47,16 +47,31 @@ if (isset($_POST['envoi'])) {
         if (!empty($_FILES['fichier'])) {
             $allowed_extensions = ['.jpg', '.jpeg', '.png', '.JPG', '.JPEG', '.PNG'];
 
-            foreach ($_FILES['fichier']['tmp_name'] as $key => $tmp_name) {
-                $file_name = $_FILES['fichier']['name'][$key];
+            // Réorganise les fichiers dans un tableau unique et les trie par nom
+            $files = [];
+            foreach ($_FILES['fichier']['name'] as $key => $name) {
+                $files[] = [
+                    'name' => $name,
+                    'tmp_name' => $_FILES['fichier']['tmp_name'][$key],
+                    'type' => $_FILES['fichier']['type'][$key],
+                    'error' => $_FILES['fichier']['error'][$key],
+                    'size' => $_FILES['fichier']['size'][$key]
+                ];
+            }
+
+            // Tri naturel (ex: _1, _2, _10)
+            usort($files, fn($a, $b) => strnatcasecmp($a['name'], $b['name']));
+
+            foreach ($files as $file) {
+                $file_name = $file['name'];
+                $tmp_name = $file['tmp_name'];
                 $file_ext = strtolower(strrchr($file_name, '.'));
 
                 if (in_array($file_ext, $allowed_extensions)) {
-                    $new_name = uniqid() . $file_ext; // Nom unique pour éviter collisions
+                    $new_name = uniqid() . $file_ext;
                     $file_dest = 'uploads/' . $new_name;
 
                     if (move_uploaded_file($tmp_name, $file_dest)) {
-                        // Insère la photo en liant l'id_annonce
                         $insertPhoto = $bdd->prepare('INSERT INTO photos (nom, fichier_url, id_annonce) VALUES (?, ?, ?)');
                         $insertPhoto->execute([$file_name, $file_dest, $id_annonce]);
                     }
@@ -132,6 +147,6 @@ if (isset($_POST['envoi'])) {
 
 </body>
 
-<!--tzest-->
+<!--test-->
 
 </html>
